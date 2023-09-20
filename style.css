@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, p, span, a, ul, li, button {
+  font-family: "lato", sans-serif;
+}
+
+.my-container {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+@media (min-width: 1920px) {
+  .my-container {
+    padding-left: 375px;
+    padding-right: 375px;
+  }
+}
+
+.header {
+  padding-top: 32.5px;
+  padding-bottom: 32.5px;
+  background: rgba(16, 16, 29, 0.9);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo p, .header__logo span {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.header__logo p {
+  color: #fff;
+}
+.header__logo span {
+  color: #42A9ED;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  text-transform: uppercase;
+}
+.header__links a {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  margin: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.header__links a:not(.header__links--current) {
+  color: #fff;
+}
+.header__links a:not(.header__links--current):hover {
+  color: #42A9ED;
+}
+.header__links--current {
+  color: #42A9ED;
+}
+
+.show {
+  background: url(/employcity/media/show.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 850px;
+  max-height: 100vh;
+}
+.show__content {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.show__name {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+}
+.show__name span {
+  color: #3E9CDC;
+}
+.show__desc p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.show__desc ul {
+  padding-left: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.show__desc li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style-type: "-";
+  padding-left: 10px;
+}
+.show__btns {
+  display: flex;
+  gap: 30px;
+}
+.show__btns button {
+  width: 183px;
+  height: 43px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.btn {
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn--blue {
+  background: #3E9CDC;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn--blue:hover {
+  background: #fff;
+  border: 1px solid #2A2B30;
+  color: #2A2B30;
+}
+.btn--white {
+  background: #fff;
+  color: #2A2B30;
+  border: 1px solid #2A2B30;
+}
+.btn--white:hover {
+  background: #3E9CDC;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.order {
+  background: url(/employcity/media/order.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.order__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 120px;
+  padding-bottom: 150px;
+}
+.order__name {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.order__name h2, .order__name span {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.order__name h2 {
+  color: #fff;
+}
+.order__name span {
+  color: #3E9CDC;
+}
+.order__name p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+.order__stages {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.order__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 209px;
+}
+.order__stage p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  word-break: break-word;
+  margin: 0;
+  color: #fff;
+}
+.order__circ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: #3E9CDC;
+  border: 5px solid #286690;
+  border-radius: 50%;
+}
+.order__circ img {
+  width: 55px;
+  height: 55px;
+}
+
+.footer {
+  background: #3D4050;
+}
+.footer__strip {
+  width: 1px;
+  height: 18px;
+  background: #C3C3C3;
+}
+.footer__gr {
+  color: #C3C3C3;
+}
+.footer p, .footer a:not(.footer__gr) {
+  color: #fff;
+}
+.footer__content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.footer__content p, .footer__content a {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+}
+.footer__soc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.footer__soc img {
+  width: 20px;
+  height: 20px;
+}
+.footer__soc a:hover {
+  color: #3E9CDC;
+}/*# sourceMappingURL=style.css.map */

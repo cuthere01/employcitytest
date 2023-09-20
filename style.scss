@@ -1,0 +1,282 @@
+@mixin abscont{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+$white: #fff;
+$blue: #42A9ED;
+$lightblue: #3E9CDC;
+$darkblue: #286690;
+$dark: #2A2B30;
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+h1, h2, h3, p, span, a, ul, li, button{
+    font-family: 'lato', sans-serif;
+}
+.my-container{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    @media (min-width: 1920px){
+        padding-left: 375px;
+        padding-right: 375px;
+    }
+}
+.header{
+    padding-top: 32.5px;
+    padding-bottom: 32.5px;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    background: rgba(16, 16, 29, 0.9);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &__logo{
+        p,span{
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 35px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        p{
+            color: $white;
+        }
+        span{
+            color: $blue;
+        }
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        text-transform: uppercase;
+        a{
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 16px;
+            margin: 0;
+            transition: all .2s ease;
+            cursor: pointer;
+            &:not(.header__links--current){
+                color: $white;
+                &:hover{
+                    color: $blue;
+                }
+            }
+        }
+        &--current{
+            color: $blue;
+        }
+    }
+}
+.show{
+    background: url(/employcity/media/show.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 850px;
+    max-height: 100vh;
+    &__content{
+        padding-top: 200px;
+        padding-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    &__name{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+        color: #000;
+        text-transform: uppercase;
+        margin: 0;
+        span{
+            color: $lightblue;
+        }
+    }
+    &__desc{
+        p{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        ul{
+            padding-left: 17px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        li{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            list-style-type: '-';
+            padding-left: 10px;
+        }
+    }
+    &__btns{
+        display: flex;
+        gap: 30px;
+        button{
+            width: 183px;
+            height: 43px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+}
+.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    cursor: pointer;
+    &--blue{
+        background: $lightblue;
+        color: $white;
+        border: 1px solid $white;
+        &:hover{
+            background: $white;
+            border: 1px solid $dark;
+            color: $dark;
+        }
+    }
+    &--white{
+        background: $white;
+        color: $dark;
+        border: 1px solid $dark;
+        &:hover{
+            background: $lightblue;
+            border: 1px solid $white;
+            color: $white;
+        }
+    }
+}
+.order{
+    background: url(/employcity/media/order.jpg);
+    background-position: center;
+    background-size: cover;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        padding-top: 120px;
+        padding-bottom: 150px;
+    }
+    &__name{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h2,span{
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 43px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        h2{
+            color: $white;
+        }
+        span{
+            color: $lightblue;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $white;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__stages{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+
+    }
+    &__stage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 209px;
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            text-align: center;
+            word-break: break-word;
+            margin: 0;
+            color: $white;
+        }
+    }
+    &__circ{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background: $lightblue;
+        border: 5px solid $darkblue;
+        border-radius: 50%;
+        img{
+            width: 55px;
+            height: 55px;
+        }
+    }
+}
+.footer{
+    background: #3D4050;
+    &__strip{
+        width: 1px;
+        height: 18px;
+        background: #C3C3C3;
+    }
+    &__gr{
+        color: #C3C3C3;
+    }
+    p,a:not(.footer__gr){
+        color: $white;
+    }
+    &__content{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        p,a{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            margin: 0;
+        }
+    }
+    &__soc{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        a:hover{
+            color: $lightblue;
+        }
+    }
+}
